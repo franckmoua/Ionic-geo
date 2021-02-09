@@ -66,7 +66,7 @@ export default  {
       .then((response) => {
         console.log(response.data);
         this.regions = response.data;
-        this.cityLength = this.regions.length > 1 ? this.succes = `${this.regions.length} résultats` : this.succes = `${this.regions.length} résultat`
+        this.cityLength = this.regions.length > 1 ? `${this.regions.length} résultats` : `${this.regions.length} résultat`
       })
       .catch((error) => {
         console.log(error);
@@ -87,7 +87,7 @@ export default  {
       .then((response) => {
         console.log(response.data);
         this.department = response.data;
-        this.cityLength = this.department.length > 1 ? this.succes = `${this.department.length} résultats` : this.succes = `${this.department.length} résultat`
+        this.cityLength = this.department.length > 1 ? `${this.department.length} résultats` :  `${this.department.length} résultat`
         this.result = true;
       })
       .catch((error) => {

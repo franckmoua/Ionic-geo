@@ -24,7 +24,7 @@
       </ion-select>
       <ion-button expand="full" shape="round" @click.prevent="TownList" type="submit">Search</ion-button>
     </ion-card>
-    <ion-badge text-center color="success" v-if="result">{{cityLength}}</ion-badge>
+    <ion-badge  color="success" v-if="result">{{cityLength}}</ion-badge>
     <ion-card v-for="data in town" :key="data">
       <ion-list>
      <ion-item>
@@ -72,7 +72,7 @@ export default  {
       .then((response) => {
         console.log(response.data);
         this.departments = response.data;
-        this.cityLength = this.departments.length > 1 ? this.succes = `${this.departments.length} résultats` : this.succes = `${this.departments.length} résultat`
+        this.cityLength = this.departments.length > 1 ? `${this.departments.length} résultats` :  `${this.departments.length} résultat`
       })
       .catch((error) => {
         console.log(error);
@@ -93,7 +93,7 @@ export default  {
       .then((response) => {
         console.log(response.data);
         this.town = response.data;
-        this.cityLength = this.town.length > 1 ? this.succes = `${this.town.length} résultats` : this.succes = `${this.town.length} résultat`
+        this.cityLength = this.town.length > 1 ?  `${this.town.length} résultats` :  `${this.town.length} résultat`
         this.result = true;
       })
       .catch((error) => {
